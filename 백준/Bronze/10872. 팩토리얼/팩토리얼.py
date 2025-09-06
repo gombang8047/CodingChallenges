@@ -1,7 +1,7 @@
-def fac(a):
-  num = 1
-  for i in range(1, a+1):
-    num *= i
-  return num
+def fac(n):
+  if n >= 1:
+    return n* fac(n-1)
+  else:
+    return 1
 
 print(fac(int(input())))
