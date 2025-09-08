@@ -1,14 +1,15 @@
 import sys
-
 input = sys.stdin.readline
+print = sys.stdout.write
 
 N = int(input())
-k = [0]*(10000+1)
+lst = [0] * (10001)
 
 for _ in range(N):
-    k[int(input())] += 1
+    num = int(input())
+    lst[num] += 1
 
-for i in range(len(k)):
-    if k[i] != 0:
-        for _ in range(k[i]):
-            sys.stdout.write(str(i) + "\n")
+for i in range(len(lst)):
+    if lst[i] != 0:
+        for _ in range(lst[i]): 
+            print(f"{i}\n")
