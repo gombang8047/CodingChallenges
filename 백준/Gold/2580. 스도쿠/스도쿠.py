@@ -1,9 +1,6 @@
-def judgment(y, x, k):
-
-    if not row_used[y][k] and not col_used[x][k] and not box_used[(y//3)*3 + (x//3)][k]:
+def judgment(x, y, k):
+    if not row_used[x][k] and not col_used[y][k] and not box_used[(x//3)*3 + (y//3)][k]:
         return True
-
-
 
 def sudoku(n, find_empty, lst):
 
@@ -45,7 +42,7 @@ box_used = [[False]*10 for _ in range(9)]
 
 for i in range(9):
     for j in range(9):
-        if lst[i][j] != 0:  # 0이면 사용하지 않음
+        if lst[i][j] != 0:
             row_used[i][lst[i][j]] = True
             col_used[j][lst[i][j]] = True
 
